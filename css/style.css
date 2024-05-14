@@ -1,0 +1,46 @@
+table { border-spacing: 0; border-collapse: collapse; }
+td { border: solid 1px; padding: 5px; } 
+th { border: none; }
+
+/* CSS for header */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #00b7ff; /* Blue-ish background */
+    color: #fff; /* White text */
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Add some padding for better spacing */
+}
+
+nav {
+    text-align: center; /* Center-align navigation */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px; /* Add some spacing between navigation items */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* White text */
+    font-weight: bold; /* Make font bold */
+}
+
+.logout {
+    float: right; /* Align logout link to the right */
+    margin-right: 20px; /* Add some spacing between logout link and navigation */
+    font-weight: bold; /* Make font bold */
+}
+
+.total {
+    font-weight: bold; /* Make font bold */
+}
