@@ -44,3 +44,7 @@ nav a {
 .total {
     font-weight: bold; /* Make font bold */
 }
+
+.message {
+    color: #ff0000;
+}

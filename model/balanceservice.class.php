@@ -274,7 +274,7 @@ class BalanceService
         $to      = $email;
         $subject = 'Link za registraciju na Balance';
         $message = 'Username: ' . $username .
-                   "\nRegistration link: https://rp2.studenti.math.hr/~tnovak/dz2/balance.php/users/register?seq="
+                   "\nRegistration link: https://rp2.studenti.math.hr/~tnovak/dz2/balance.php?rt=users/register&seq="
                    . $code;
         $headers = 'From: tomislav.novak1@student.math.hr'       . "\r\n" .
                     'Reply-To: tomislav.novak1@student.math.hr' . "\r\n" .

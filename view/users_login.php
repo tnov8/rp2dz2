@@ -5,9 +5,9 @@
 	Password: <input type="password" name="password" /> <br />
 	<input type="submit" value="Log in">
 </form>
-<br /> 
-<?php echo $message; ?>
-<br />
+<br> 
+<div class="message"> <?php if ( isset( $message ) ) echo $message; ?> </div>
+<br>
 Don't have an account? Make one!
 <form method="post" action="<?php echo __SITE_URL . '/balance.php?rt=users/newUser'?>">
 	Username: <input type="text" name="username" /> <br />

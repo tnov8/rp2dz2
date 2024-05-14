@@ -13,9 +13,9 @@ class DB
 	    {
 	    	try
 	    	{
-                $fileName = __DIR__ . '/../../../databasePassword';
+                $fileName = __DIR__ . '/../../../../../databasePassword';
                 if ( ( $f = fopen($fileName, 'r') ) === false )
-                	exit( "Ne mogu otvoriti file: $php_errormsg" );
+                	exit( "Ne mogu otvoriti file: $php_err	ormsg" );
                 $userinfo = fscanf( $f, "%s %s" );
                 list( $USERNAME, $PASSWORD ) = $userinfo;
                 fclose($f);

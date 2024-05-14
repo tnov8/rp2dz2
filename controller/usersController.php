@@ -34,8 +34,12 @@ class UsersController extends BaseController
         $user_id = $_GET['id_user'];
         $name = $bs->getUserNameById( $user_id );
 		$this->registry->template->title = "Overview ($name)";
-		$this->registry->template->balanceList = $bs->getHistory( $user_id );
-
+        $balanceList = $bs->getHistory( $user_id );
+		$this->registry->template->balanceList = $balanceList;
+        $total = 0;
+        foreach( $balanceList as $id => $balance )
+            $total += intval( $balance->balance );
+        $this->registry->template->total = $total;
         $this->registry->template->show( 'users_history' );
     }
 
@@ -70,7 +74,9 @@ class UsersController extends BaseController
             setcookie('loginId', $bs->getIdByUsername( $username ), time() + 3600);
             header( 'Location: ' . __SITE_URL . '/balance.php?rt=users/overview' );
         } else {
-            echo "Invalid username or password or account not confirmed. Please try again.";
+            $this->registry->template->title = 'Login';
+            $this->registry->template->message = "Invalid username or password or account not confirmed. Please try again.";
+		    $this->registry->template->show( 'users_login' );
         }
 	}
     

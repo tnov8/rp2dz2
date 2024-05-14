@@ -12,9 +12,6 @@
 			     '<td>' . $balance->balance . ' €</td>' .
 			     '</tr>';
 		}
-        $total = 0;
-        foreach( $balanceList as $user_id => $balance )
-            $total += intval( $balance->balance );
         echo '<tr class="total">' .
             '<td>' . "Total" . '</td>' .
             '<td>' . $total . ' €</td>' .
