@@ -279,8 +279,8 @@ class BalanceService
         $headers = 'From: tomislav.novak1@student.math.hr'       . "\r\n" .
                     'Reply-To: tomislav.novak1@student.math.hr' . "\r\n" .
                     'X-Mailer: PHP/' . phpversion();
-        // if ( mail($to, $subject, $message, $headers) === false )
-        //     return "Email not sent";
+        if ( mail($to, $subject, $message, $headers) === false )
+            return "Email not sent";
 
         // Add to database
         try
